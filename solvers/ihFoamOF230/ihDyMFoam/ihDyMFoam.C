@@ -156,13 +156,14 @@ int main(int argc, char *argv[])
 
             #include "alphaControls.H"
 
-            if (pimple.firstIter() || alphaOuterCorrectors)
-            {
+            //Fix based on http://www.openfoam.org/mantisbt/view.php?id=1225
+            //if (pimple.firstIter() || alphaOuterCorrectors)
+            //{
                 twoPhaseProperties.correct();
 
                 #include "alphaEqnSubCycle.H"
                 interface.correct();
-            }
+            //}
 
             #include "UEqn.H"
 
