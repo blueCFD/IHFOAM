@@ -49,7 +49,7 @@ License
 #include "addToRunTimeSelectionTable.H"
 #include "fvPatchFieldMapper.H"
 #include "surfaceFields.H"
-#include "Random.H"
+#include "Random.T.H"
 
 #include "waveFun.H"
 
