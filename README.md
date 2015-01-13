@@ -1,20 +1,20 @@
-Adaptation of IHFOAM to blueCFD-Core 2.3-1
+Adaptation of IHFOAM to blueCFD-Core 2.1-2
 ==========================================
 
-This adaptation has the necessary code changes for making IHFOAM build in blueCFD-Core 2.3-1. This version of blueCFD-Core has a port of OpenfOAM 2.3.x, commit `5f2583a17a53b0aeaa9849e177d4e357ff643470`, 18th of March 2014.
+This adaptation has the necessary code changes for making IHFOAM build in blueCFD-Core 2.1-2. This version of blueCFD-Core has a port of OpenfOAM 2.1.x,  commit `f8059ab08374b14b823312999c2877d70c289add`, on the 8th of February 2013.
 
 To use this port, run the following commands in the MSys terminal:
 ```
 git clone https://github.com/blueCFD/IHFOAM.git
 
 cd IHFOAM
-git checkout blueCFD-Core-2.3-1
+git checkout blueCFD-Core-2.1-2
 
 cd genAbs
 ./allMake > ../log.make 2>&1
 cd ..
 
-cd solvers/ihFoamOF230
+cd solvers/ihFoamOF211
 ./allMake >> ../../log.make 2>&1
 ```
 
