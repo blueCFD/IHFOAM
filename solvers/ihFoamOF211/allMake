@@ -3,7 +3,7 @@
 wclean > /dev/null
 wclean ihDyMFoam > /dev/null
 
-wmake
+wmake && wmakeVerifyExeDependencies . || wmake
 
 if (( $? )) ; then 
     echo "ihFoam compilation failed"
@@ -11,7 +11,7 @@ if (( $? )) ; then
     echo -e "\n\nihFoam compiled successfully for OpenFOAM 2.1.1\n\n\n";  
 fi
 
-wmake ihDyMFoam
+wmake ihDyMFoam && wmakeVerifyExeDependencies . || wmake ihDyMFoam
 
 if (( $? )) ; then 
     echo "ihDyMFoam compilation failed"
